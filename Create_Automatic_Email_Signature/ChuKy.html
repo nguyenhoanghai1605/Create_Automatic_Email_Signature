@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style/site.css">
+    <style>
+        legend {
+            width: auto;
+        }
+
+        fieldset {
+            min-width: 0;
+            padding: 10px;
+            margin: 20px;
+            border: solid 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="float: left; width: 450px;">
+        <form class="form-horizontal">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Tạo chữ ký</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <span class="col-md-4 control-span" for="Ten">Tên</span>
+                    <div class="col-md-8">
+                        <input id="Ten" name="Ten" type="text" placeholder="Tên" class="form-control input-md"
+                            required="" onkeyup="functionHoTen()">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <span class="col-md-4 control-span" for="Ho">Họ</span>
+                    <div class="col-md-8">
+                        <input id="Ho" name="Ho" type="text" placeholder="Họ" class="form-control input-md" required=""
+                            onkeyup="functionHoTen()">
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <span class="col-md-4 control-span" for="radios">Giới Tính</span>
+                    <div class="col-md-8">
+                        <span class="radio-inline" for="radios-0">
+                            <input type="radio" name="radios" id="radios-0" value="1" checked="checked"
+                                onchange="functionGioiTinh(this)">
+                            Nam
+                        </span>
+                        <span class="radio-inline" for="radios-1">
+                            <input type="radio" name="radios" id="radios-1" value="0" onchange="functionGioiTinh(this)">
+                            Nữ
+                        </span>
+                    </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <span class="col-md-4 control-span" for="CongViec">Công việc</span>
+                    <div class="col-md-8">
+                        <input id="CongViec" name="CongViec" type="text" placeholder="Công việc"
+                            class="form-control input-md" required="" onkeyup="functionCongViec()">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <span class="col-md-4 control-span" for="Phone">Phone</span>
+                    <div class="col-md-8">
+                        <input id="Phone" name="Phone" type="text" placeholder="Phone" class="form-control input-md"
+                            required="" onkeyup="functionPhone()">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <span class="col-md-4 control-span" for="EXT">EXT</span>
+                    <div class="col-md-8">
+                        <input id="EXT" name="EXT" type="text" placeholder="EXT" class="form-control input-md"
+                            required="" onkeyup="functionPhone()">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <span class="col-md-4 control-span" for="Mobile">Mobile</span>
+                    <div class="col-md-8">
+                        <input id="Mobile" name="Mobile" type="text" placeholder="Mobile" class="form-control input-md"
+                            required="" onkeyup="functionMobile()">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <span class="col-md-4 control-span" for="Email">Email</span>
+                    <div class="col-md-8">
+                        <input id="Email" name="Email" type="text" placeholder="Email" class="form-control input-md"
+                            required="" onkeyup="functionEmail()">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <!-- <div class="form-group">
+                    <span class="col-md-4 control-span" for="DiaChi">Địa chỉ</span>
+                    <div class="col-md-8">
+                        <input id="DiaChi" name="DiaChi" type="text" placeholder="Địa chỉ" class="form-control input-md"
+                            required="" onkeyup="functionDiaChi()">
+
+                    </div>
+                </div> -->
+
+                <!-- Text input-->
+                <!-- <div class="form-group">
+                    <span class="col-md-4 control-span" for="Facebook">Facebook</span>
+                    <div class="col-md-8">
+                        <input id="Facebook" name="Facebook" type="text" placeholder="Facebook"
+                            class="form-control input-md" required="" onkeyup="functionFaceBook()">
+
+                    </div>
+                </div> -->
+
+                <!-- Text input
+                <div class="form-group">
+                    <span class="col-md-4 control-span" for="Web">Web</span>
+                    <div class="col-md-8">
+                        <input id="Web" name="Web" type="text" placeholder="Web" class="form-control input-md"
+                            required="" onkeyup="functionWeb()">
+
+                    </div>
+                </div> -->
+                <br>
+                <!-- Button -->
+                <div class="form-group">
+                    <span class="col-md-4 control-span" for="Coppy"></span>
+                    <div class="col-md-8">
+                        <button id="Coppy" name="Coppy" class="btn btn-primary" type="button">Copy</button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+        <br>
+    </div>
+    <div style="float: left;">
+        <form class="form-horizontal">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Thông tin</legend>
+
+                <div id="ThongTin">
+                    <br><br><br>
+                    <span>Thanks & Best Regards,</span><br><br><br>
+                    <span style="font-size: 24px; font-weight: bold;"><span id="TenText">Hai</span>, <span id="HoText">Nguyen Hoang</span>
+                    <span id="GioiTinhText">(Mr)</span></span><br>
+                    <span id="CongViecText" style="font-style: italic;">IT Software</span><br>
+                    <span style="font-size: 17px;">*******************************************************************************************</span>
+                    <div>
+                        <div class="idhinh" style="float: left; width: 150px; vertical-align: middle;">
+                            <!-- <img src="https://theme.hstatic.net/1000381168/1000706759/14/logo.png"> -->
+                            <img src="./image/Logo-FPT-Shops-2.jpg">
+                        </div>
+                        <div style="float: left; margin-left: 20px;">
+                            <span style="color: rgb(1, 3, 8);">Phone : </span><span id="PhoneText" style="font-weight: bold;">(84-28) 7300 8889 </span><span style="color: rgb(1, 3, 8);">- EXT :
+                            </span><span id="EXTText" style="font-weight: bold;">844</span><br>
+                            <span style="color: rgb(1, 3, 8);">Mobile : </span><span id="MobileText" style="font-weight: bold;">0343327971</span><br>
+                            <span style="color: rgb(1, 3, 8);float: left; width: 54px;">Mail : </span><span id="EmailText"
+                                style="text-decoration: underline; color: rgb(1, 88, 250);">hai.nh@fpt.vn</span><br>
+                            <span style="color: rgb(1, 3, 8);float: left; width: 54px;">Web : </span><span id="WebText" style="text-decoration: underline;font-weight: bold;">www.fpt.com.vn</span><br>
+                            <span id="FacebookText" style="color: rgb(1, 88, 250);">http://www.facebook.com/FPT</span><br>
+                            <span id="DiaChiText" style="font-weight: bold;">Lô 37-39A, đường 19, KCX Tân Thuận, Tân Thuận Đông, Q7 
+                            </span><br>
+                            <span style="font-weight: bold;">Tp. Hồ Chí Minh</span>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+
+    </div>
+    <input id="hdInfomation" hidden>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function functionHoTen() {
+            $('#HoText').html($('#Ho').val());
+            $('#TenText').html($('#Ten').val());
+        }
+        function functionGioiTinh(obj) {
+            var gioiTinh = $(obj).val();
+
+            if (gioiTinh == 1) {
+                $('#GioiTinhText').html('(Mr)');
+            } else {
+                $('#GioiTinhText').html('(Ms)');
+            }
+        }
+        function functionPhone() {
+            $('#PhoneText').html($('#Phone').val());
+            $('#EXTText').html($('#EXT').val());
+        }
+        function functionMobile() {
+            $('#MobileText').html($('#Mobile').val());
+        }
+        function functionCongViec() {
+            $('#CongViecText').html($('#CongViec').val());
+        }
+        function functionMobile() {
+            $('#MobileText').html($('#Mobile').val());
+        }
+        function functionFaceBook() {
+            $('#FacebookText').html($('#Facebook').val());
+        }
+        function functionWeb() {
+            $('#WebText').html($('#Web').val());
+        }
+        function functionDiaChi() {
+            $('#DiaChiText').html($('#DiaChi').val());
+        }
+        function functionEmail() {
+            $('#EmailText').html($('#Email').val());
+        }
+        $('#Coppy').on('click', function () {
+            var info = $('#ThongTin').html();
+            Clipboard_CopyTo(info);
+            alert('Sao chép thành công.');
+        });
+        function Clipboard_CopyTo(value) {
+            var tempInput = document.createElement("input");
+            tempInput.value = value;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+        }
+    </script>
+
+</body>
+
+</html>

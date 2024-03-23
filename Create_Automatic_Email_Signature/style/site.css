@@ -1,0 +1,38 @@
+img {
+    vertical-align: middle;
+    width: 150px;
+}
+
+style attribute {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+
+fieldset {
+    min-width: 0;
+    padding: 10px;
+    margin: 20px;
+    border: solid 1px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
